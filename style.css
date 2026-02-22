@@ -1,0 +1,507 @@
+body{
+    margin: 0;  /* tira o espaço externo que o navegador coloca.  */
+    padding: 0;  /* tira qualquer espaço interno.  */
+    overflow: auto; /* Isso corta qualquer coisa que passe da altura da tela */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+#palco {
+  position: relative;
+  width: 550px; 
+  height: 400px; 
+  margin: 0 auto;
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.parede {
+    background-image: url("imagens/parede.png"); /* caminho pra imagem*/
+    width: 100%; /* vw = largura da tela inteira; a parede ocupa toda a largura*/
+    height: 100%; /* vh = altura da tela inteira; a parede ocupa toda a altura*/
+    background-size: cover; /* cobre a tela inteira sem distorcer*/
+    background-position: center; /* foca no meio da imagem */
+    image-rendering: pixelated; /* não deixa borrado */
+}
+
+.cortina {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 430px; 
+    background-image: url("imagens/cortina.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.mesa {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    background-image: url("imagens/mesa.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.piso {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150%;
+    height: 61px; 
+    background-image: url("imagens/piso.png");
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.bolo {
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    left: 220px;
+    width: 110px;
+    height: 300px; 
+    background-image: url("imagens/bolo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+.personagem-principal {
+    position: absolute;
+    top: 167px;
+    bottom: 0;
+    left: 30px;
+    width: 100%;
+    height: 180px; 
+    background-image: url("imagens/personagem-principal.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.presente {
+    position: absolute;
+    top: 310px;
+    bottom: 0;
+    left:-20px;
+    width: 100%;
+    height: 50px; 
+    background-image: url("imagens/presente1.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.vaso {
+    position: absolute;
+    top: 265px;
+    bottom: 0;
+    left: -240px;
+    width: 100%;
+    height: 87px; 
+    background-image: url("imagens/vasodeflores.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.personagem-quadro {
+    position: absolute;
+    top: -18px;
+    bottom: 0;
+    left: -70px;
+    width: 100%;
+    height: 350px; 
+    background-image: url("imagens/personagem-quadro.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.cartafechada {
+    position: absolute;
+    top: 330px;
+    bottom: 0;
+    left: -150px;
+    width: 100%;
+    height: 35px; 
+    background-image: url("imagens/cartafechada.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.camera {
+    position: absolute;
+    top: 320px;
+    bottom: 0;
+    left: 175px;
+    width: 100%;
+    height: 58px; 
+    background-image: url("imagens/camera.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 50;
+}
+
+.estrela1 {
+    position: absolute;
+    top: 220px;
+    bottom: 0;
+    left: -40px;
+    width: 100%;
+    height: 30px; 
+    background-image: url("imagens/estrela1.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.estrela2 {
+    position: absolute;
+    top: 270px;
+    bottom: 0;
+    left: 45px;
+    width: 100%;
+    height: 30px; 
+    background-image: url("imagens/estrela2.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.pet-4 {
+    position: absolute;
+    top: 320px;
+    bottom: 0;
+    left: 50px;
+    width: 100%;
+    height: 90px; 
+    background-image: url("imagens/pet-4.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.pet-1 {
+    position: absolute;
+    top: 280px;
+    bottom: 0;
+    left: -80px;
+    width: 100%;
+    height: 92px; 
+    background-image: url("imagens/pet-1.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.pet-3 {
+    position: absolute;
+    top: 280px;
+    bottom: 0;
+    left: 230px;
+    width: 100%;
+    height: 145px; 
+    background-image: url("imagens/pet-3.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.pet-2 {
+    position: absolute;
+    top: 290px;
+    bottom: 0;
+    left: 120px;
+    width: 100%;
+    height: 85px; 
+    background-image: url("imagens/pet-2.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+
+.teto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px; 
+    background-image: url("imagens/teto.png");
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    image-rendering: pixelated;
+}
+
+.som {
+    position: absolute;
+    top: 330px;
+    bottom: 0;
+    left: 20px;
+    width: 85px;
+    height: 85px; 
+    background-image: url("imagens/som.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.camera, .personagem-quadro, .cartafechada, .som { cursor: pointer; }
+
+.cartafechada.aberta {
+    background-image: url("imagens/cartaaberta.png") !important;
+    position: absolute;
+    top: 315px;
+    bottom: 0;
+    left: -150px;
+    width: 100%;
+    height: 55px;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+.papeldecarta {
+    width: 100%;
+    height: auto;
+    max-width: 90%; /* garante que caiba na largura do celular */
+    display: block;
+    margin: 0 auto;
+    z-index: 1001;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* sombra para dar profundidade */
+    image-rendering: pixelated; /* mantém a nitidez do seu pixel art */
+}
+
+#overlay-inner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;    /* habilita o deslize vertical */
+    overflow-x: hidden;
+    padding: 0px 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ajuste no box para remover fundos, já que a imagem é o próprio papel */
+#overlay-box {
+    background: transparent !important;
+    border: none !important;
+    width: 100%;   /* quase a largura total do palco */
+    height: 80%;      /* altura limitada para o papel deslizar dentro */
+    overflow-y: auto;    /* habilita o scroll vertical */
+    overflow-x: hidden;  /* esconde scroll horizontal */
+    display: block;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Escurece levemente o cenário */
+    display: none; /* JS controla isso */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* estilo do Botão de Fechar */
+#overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #655bab;
+    color: white;
+    border: 2px solid #000;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1002;
+    image-rendering: pixelated;
+}
+
+#overlay-close:hover {
+    background: #36257a;
+}
+
+@media (max-width: 600px) {
+    #palco {
+        transform: scale(0.65); /* diminui o palco para 65% do tamanho */
+        transform-origin: center;
+    }
+}
+
+#overlay-box::-webkit-scrollbar {
+    width: 8px;
+}
+#overlay-box::-webkit-scrollbar-thumb {
+    background: rgba(39, 36, 36, 0.3);
+    border-radius: 10px;
+
+}
+
+/* aqui é os coiso das polaroids*/
+#polaroid-viewer {
+    text-align: center;
+    max-width: 95vw;
+    max-height: 90vh;
+    display: flex; /* transforma o contêiner em um flexbox */
+    flex-direction: column; /* organiza os itens verticalmente (foto, depois botões) */
+    align-items: center; /* centraliza a foto e os botões horizontalmente */
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* estilo para a imagem da Polaroid */
+.polaroid-imagem {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 65vh; /* pra garantir que caiba verticalmente no celular */
+    display: block;
+    margin: 0 auto 0px auto;
+    image-rendering: pixelated;
+    padding: 0px;
+}
+
+/* container para alinhar os botões lado a lado */
+.navigation-buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* espaçamento entre os botões */
+    width: 100%;
+    margin-top: 10px;
+    gap: 20px;
+    max-width: 350px;
+}
+
+/* estilo dos botões */
+.nav-button {
+    padding: 10px 10px;
+    background-color: #ffffff; /* cor de fundo amarela/dourada */
+    border-radius: 6px;
+    color: #72498f(20.83% 51.12 315.19);
+    border: 1px solid #815a96;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    image-rendering: pixelated; /* mantém o estilo pixel art */
+    padding: 6px 10px;
+    z-index: 1000;
+}
+
+.nav-button:hover {
+    background-color: #522b6e;
+}
+
+/* espaçador invisível para manter o 'Próxima' no canto quando 'Voltar' não existe */
+.spacer {
+    width: 60px;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+#overlay-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  pointer-events: auto;
+}
+
+#overlay-box {
+  position: relative;
+  background: #fff;
+  border: 2px solid #450769;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 10000;
+  max-width: 550px;
+  max-height: 400px;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  image-rendering: pixelated;
+}
+
+#rotate-warning {
+  display: none;
+}
+
+@media screen and (orientation: portrait) {
+  #rotate-warning {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    z-index: 9999;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #palco {
+    display: none;
+  }
+}
