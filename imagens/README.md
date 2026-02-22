@@ -1,1 +1,1 @@
-
+Imagens usadas no projeto.
