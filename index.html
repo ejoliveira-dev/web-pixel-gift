@@ -1,0 +1,56 @@
+<!DOCTYPE html> <!-- essa primeira linha indica que esse documento é html 5-->
+<html lang="pt-br"> <!-- aqui é o idioma do site -->
+
+<head> <!-- isso são tags; quase todas possuem tag/marca de abertura e de fechamento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gift Page</title> <!-- Título do site -->
+    <link rel="stylesheet" href="style.css"> <!-- a primeira parte é diz que é folhas de estilo e a segunda aponta para o arquivo -->
+    <!-- é tipo dizer "esse arquivo aqui é uma roupinha pra página"-->
+</head>
+<body>
+    <main>
+        <div id="palco">
+            <div class="parede">
+                <div class="piso"></div>
+                <div class="teto"></div>
+                <div class="presente"></div>
+                <div class="vaso"></div>
+                <div class="personagem-quadro"></div>
+                <div class="pet-1"></div>
+                <div class="cortina"></div> <!-- a cortina é desenhada por cima, mas ainda na mesma camada -->
+                <div class="personagem-principal"></div>
+                <div class="mesa"></div>
+                <div class="bolo"></div>
+                <div class="cartafechada" data-role="clickable"></div>
+                <div class="camera" data-role="clickable"></div>
+                <div class="estrela1"></div>
+                <div class="estrela2"></div>
+                <div class="pet-2"></div>
+                <div class="pet-4"></div>
+                <div class="pet-3"></div>
+                <div class="som" data-role="clickable"></div>
+            </div> <!-- criando a primeira classe -->
+            <div id="overlay" style="display:none;"> <!-- aqui é como uma cortina mágica por cima; o none diz pra aparecer só quando o js mandar -->
+                <div id="overlay-back"></div> <!-- fundo escuro/embaçado que aparece atrás da caixa.  -->
+                <div id="overlay-box"> <!-- onde entra o conteúdo; carta aberta, moldura ou foto maior -->
+                    <button id="overlay-close">✕</button> <!-- botão pra fechar o pop up -->
+                    <div id="overlay-inner"></div> <!-- o js vai colocar o conteúdo que mudou aqui -->
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- áudio; aqui é pro js localizar; aqui o arquivo; loop; carrega assim que o site abre -->
+        <audio id="bg-audio" src="imagens/background-theme.mp3" loop preload="auto"></audio>
+    </main>
+    
+    <script src="script.js"> </script> <!-- o atributo fica na tag de abertura -->
+    <!-- é assim que chamamos o arquivo em JS; isso deve ficar bem no final do body -->
+    <!-- o JS só consegue interagir com as coisas depois que elas já existem; então primeiro nasce o HTML, depois o JS assume -->
+
+</body>
+<div id="rotate-warning">
+    <p> Por favor, gire o dispositivo para a horizontal ✨ </p>
+</div>
+</html>
